@@ -134,13 +134,10 @@ function saveFiltersToLocalStorage(filters) {
 function getFiltersFromLocalStorage() {
   // TODO: MODULE_FILTERS
   // 1. Get the filters from localStorage and return String read as an object
-
-  let filters= JSON.parse(window.localStorage.getItem('filters')); 
-  // Place holder for functionality to work in the Stubs
-  console.log("filters", filters);
+  let filters= JSON.parse(window.localStorage.getItem('filters'));
   return filters;
   // Place holder for functionality to work in the Stubs
- // return null;
+  return null;
 }
 
 //Implementation of DOM manipulation to add the following filters to DOM :
@@ -150,7 +147,6 @@ function getFiltersFromLocalStorage() {
 function generateFilterPillsAndUpdateDOM(filters) {
   // TODO: MODULE_FILTERS
   // 1. Use the filters given as input, update the Duration Filter value and Generate Category Pills
-
   let parent=document.getElementById('category-list');
   filters.category.forEach((item,i)=>{
     parent.innerHTML+=`<span class="category-filter">${item} <span class="ms-2" onclick="FilterRemover(${i})"><b>x</b> </span></span> `
